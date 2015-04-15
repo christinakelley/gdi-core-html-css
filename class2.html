@@ -45,7 +45,7 @@
         
         <!-- Welcome-->
         <section class="hide-pdf">
-          <h3>Welcome!</h3>
+          <h3>Welcome back!</h3>
           <div class = "left-align">
           <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
           <p class ="green">Some "rules"</p>
@@ -56,6 +56,15 @@
             <li>Have fun</li>
           </ul>
           </div>
+        </section>
+
+         <section>
+          <h3>Welcome!</h3>
+          <ul>
+          	<li>Names again! :)</li>
+          	<li>What is one thing you learned / liked / found especially cool from last week?</li>
+          	<li>What is one question you still have? (or thing you're still confused about or want to have clarified, etc)</li>
+          </ul>
         </section>
         
         <!-- Role of HTML v. CSS-->
@@ -70,7 +79,8 @@
 
         <!-- What is CSS-->
         <section>
-          <h3>CSS: What is it?</h3>
+          <h3>Today: CSS!</h3>
+          <p>First - what is it?</p>
           <p>CSS = <span class="green">C</span>ascading <span class="green">S</span>tyle <span class="green">S</span>heets</p>
           <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
           <p>CSS works in conjunction with HTML, but is not HTML itself.</p>
@@ -78,8 +88,19 @@
         
         <section>
           <h3>CSS: What can it do?</h3>
-          <p>All colored text, position, and size</p>
-          <img src = "images/homepage-view.png">
+          <p>CSS sets/changes styles: i.e. color, position, size</p>
+          <p style="font-size:24px">There is default HTML element styling (think: plain old Times New Roman paragraphs):<br>CSS lets you change that and make things more exciting and pretty!</p>
+          <img src = "images/homepage-view.png" style="height:400px">
+        </section>
+
+        <section>
+          <h3>A website WITH CSS</h3>
+          <img src = "images/ovuline_frontpage_ex.png">
+        </section>
+
+        <section>
+          <h3>A website WITHOUT CSS...</h3>
+          <img src = "images/ovuline_frontpage_blank_ex.png">
         </section>
         
         <section>
@@ -101,9 +122,10 @@ selector {
 </code></pre>
           <div class = "left-align">
             <p>A block of CSS code is a rule.</p>
-            <p>The rule starts with a selector.</p>
-            <p>It has sets of properties and values.</p>
-            <p>A property-value pair is a declaration.</p>
+            <p>- The rule starts with a selector.</p>
+            <p>- It has sets of properties and values.</p>
+            <p>- A property-value pair is a declaration.</p>
+            <p>Like with HTML, we use white space and indenting in CSS just for readability</p>
           </div>
         </section>
         
@@ -111,7 +133,7 @@ selector {
         <section>
           <h3>CSS Syntax</h3>
           <div class = "left-align">
-            <p>Declarations:  Property and value of style you plan use on HTML element. </p>
+          <p>Declarations:  Property and value of style you plan to use on an HTML element. </p>
           <p>Declarations end with a semicolon</p>
           <p>Declaration groups are surrounded by curly brackets.</p>
           </div>
@@ -141,80 +163,7 @@ img {
 </code></pre>
         <p>Selects all image elements.</p>
         </section>
-        
-        <!-- Selectors ID-->
-        <section>
-			    <h3>Selector: ID</h3>
-<pre><code class = "html">
-#footer {
-  property: value;
-}
-</code></pre>
-          <p>Selects all elements with an id of "footer".</p>
-          
-<pre><code class = "html">
-&lt;p id="footer">Copyright 2011&lt;/p>
-</code></pre>
-         <p>The associated HTML.</p>
-			  </section>
-        
-        <!-- Selectors Class-->
-        <section>
-			    <h3>Selector: Class</h3>
-<pre><code class = "html">
-.warning {
-  color: red;
-}
-</code></pre>
-          <p>Selects all elements with a class of "warning".</p>
 
-<pre><code class = "html">
-&lt;p class="warning">Run away!&lt;/p>
-</code></pre>
-         <p>The associated HTML.</p>
-			  </section>
-        
-        <!-- ID vs Class-->
-        <section>
-        <h3>IDs vs. Classes</h3>
-        <div class = "left-align">
-          <span class = "yellow">ID</span> -- Should only apply to one element on a webpage. I.E. A webpage only has one footer.
-          <p>The "#" is how you tell CSS "this is an id."</p>
-        </div>
-        <div class = "left-align">
-          <span class = "yellow">Class</span> -- Many elements can have the same class. I.E. There can be many warnings on one webpage.
-          <p>The "." is how you tell CSS "this is a class name."</p>
-        </div>
-      </section>  
-      
-        <!-- Selector descendant-->
-        <section>
-        <h3>Selector: Descendant</h3>
-<pre><code class = "html">
-p em {
-  color: yellow;
-}
-</code></pre>
-       <p>Selects all em elements that are within a paragraph</p>
-<pre><code class = "html">
-&lt;p>This is &lt;em>important.&lt;/em>&lt;/p>
-</code></pre>
-        <p>The associated HTML.</p>
-      </section>
-        
-        <!-- Multiple values -->
-        <section>
-        <h3>Property Values</h3>
-        <p>Each property can have one or more comma separated values.</p>
-<pre><code class = "html">
-p{
-  color: white;
-  background-color: red;
-  font-family: Arial, sans-serif;
-}
-</code></pre>
-      </section>
-        
         <!-- Color-->
         <section>
           <h3>Property: Color</h3>
@@ -226,9 +175,10 @@ p {
   color: rgb(255, 0, 0);
 }
 </code></pre>
-        <p>Color name</p>
-        <p>Hexadecimal value</p>
-        <p>RGB value</p>
+        <p>There are multiple formats for color values</p>
+        <p>- Color name</p>
+        <p>- Hexadecimal value</p>
+        <p>- RGB value</p>
         <p><small>The 17 standard colors are: <font color="aqua" style="background:black;">aqua</font>, <font color="black">black</font>, <font color="blue">blue</font>, <font color="fuchsia">fuchsia</font>, <font color="gray">gray</font>, <font color="grey">grey</font>, <font color="green">green</font>, <font color="lime">lime</font>, <font color="maroon">maroon</font>, <font color="navy">navy</font>, <font color="olive">olive</font>, <font color="purple">purple</font>, <font color="red">red</font>, <font color="silver" style="background:black;">silver</font>, <font color="teal">teal</font>, <font color="white" style="background:black;">white</font>, and <font color="yellow" style="background:black;">yellow</font>.</small></p>
 
         </section>
@@ -244,6 +194,7 @@ p {
   background-color: rgb(0,0,0);
 }
 </code></pre>
+		<p>(Same color rules/formats apply for background-color as for color)</p>
         </section>
       
         <!-- Font family-->
@@ -259,7 +210,7 @@ p {
 </code></pre>
           <p>Specific font name</p>
           <p>Generic name</p>
-          <p>Comma-separated list</p>
+          <p>Comma-separated list (later options = fallbacks)</p>
         </section>
       
         <!-- Font size -->
@@ -273,9 +224,10 @@ p {
   font-size: 100%;
 }
 </code></pre>
-          <p>Pixels</p>
-          <p>"em"</p>
-          <p>Percentage</p>
+          <p>Multiple formats here too:</p>
+          <p>- Pixels</p>
+          <p>- "em"</p>
+          <p>- Percentage</p>
         </section>
         
         <!-- Fonts-->
@@ -312,7 +264,7 @@ p {
 <pre><code class = "html">
   &lt;p style="color:red">Some text.&lt;/p>
 </code></pre>
-          <p>Uses the HTML attribute style.</p>
+          <p>Uses the HTML attribute "style".</p>
           <p>Difficult to use in large projects</p>
           <p>Not preferred.</p>
         </section>
@@ -353,12 +305,122 @@ p {
         <section class="hide-pdf">
           <h3>Let's develop it</h3>
           <ul>
-            <li>Create a new .css file</li>
-            <li>Add a link to the file in the head of the portfolio made last time</li>
-            <li>Add styles to change the colors, background colors or fonts of different parts of the content</li>
-            <li>Try using ids and classes to change specific elements</li>
+            <li>Create a new .css file:<br>
+            <span style="color:pink;font-size:24px">- Create a new file in Sublime<br>
+            - Save it: your_filename, with a an extension of ".css" (i.e. style.css)</span></li>
+            <li>Add a link to the file in the head of the portfolio you made last time:
+	            <span style="color:pink;font-size:24px">&lt;link rel="stylesheet" type="text/css" href="style.css"></span>
+			</li>
+            <li>Add styles to change the <span style="color:aqua;font-size:40px">colors, background colors and/or fonts</span> of different parts of the content<br>
+            	<img src="images/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none; height:200px"/>
+            </li>
           </ul>
         </section>
+
+        <section>
+          <h3>RECAP: Anatomy of an HTML element</h3>
+          <ul>
+            <li class = "fragment">
+              <strong class="blue">Attribute</strong>
+              <ul>
+                <li>Provides additional information about the HTML element</li>
+                <li>Class, ID, language, style, identity, source</li>
+                <li>Placed inside an opening tag, before the right angle bracket.</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              <strong class="blue">Value</strong>
+              <ul>
+              <li>Value is the value assigned to a given attribute.</li>
+              <li>Values must be contained inside quotation marks.</li>
+              <li>
+                <pre><code class ="html">&lt;div id="copyright">&copy; GDI 2013&lt;/div>
+                &lt;img src="my_picture.jpg" /> 
+                &lt;a href="http://girldevelopit.com">GDI&lt;/a>
+                </code></pre>
+              </li>
+            </li>
+          </ul>
+        </section>
+        
+        <!-- Selectors ID-->
+        <section>
+			    <h3>Selector: ID</h3>
+<pre><code class = "html">
+#footer {
+  property: value;
+}
+</code></pre>
+          <p>Selects all elements with an id of "footer".</p>
+          
+<pre><code class = "html">
+&lt;p id="footer">Copyright 2011&lt;/p>
+</code></pre>
+         <p>The associated HTML.</p>
+			  </section>
+        
+        <!-- Selectors Class-->
+        <section>
+			    <h3>Selector: Class</h3>
+<pre><code class = "html">
+.warning {
+  color: red;
+}
+</code></pre>
+          <p>Selects all elements with a class of "warning".</p>
+
+<pre><code class = "html">
+&lt;p class="warning">Run away!&lt;/p>
+</code></pre>
+         <p>The associated HTML.</p>
+			  </section>
+        
+        <!-- ID vs Class-->
+        <section>
+        <h3>IDs vs. Classes</h3>
+        <div class = "left-align">
+          <span class = "yellow">ID</span> -- Should only apply to one element on a webpage.<br>i.e. a webpage only has one footer.
+          <p>The "#" (hashtag) is how you tell CSS "this is an id."</p>
+        </div>
+        <div class = "left-align">
+          <span class = "yellow">Class</span> -- Many elements can have the same class. I.E. There can be many warnings on one webpage.
+          <p>The "." (period) is how you tell CSS "this is a class name."</p>
+        </div>
+      </section>  
+      
+        <!-- Selector descendant-->
+        <section>
+        <h3>Selector: Descendant</h3>
+<pre><code class = "html">
+p em {
+  color: yellow;
+}
+</code></pre>
+       <p>Selects all em elements that are within a paragraph</p>
+<pre><code class = "html">
+&lt;p>This is &lt;em>important.&lt;/em>&lt;/p>
+</code></pre>
+<pre><code class = "html">
+&lt;em>This is less important because there is no p tag around it!&lt;/em>
+</code></pre>
+        <p>(the associated HTML ^)</p>
+<p>And, in action:</p>
+<p>This is <em style="color:yellow">important.</em></p>
+<em>This is less important because there is no p tag around it!</em>
+      </section>
+        
+        <!-- Multiple values -->
+        <!-- <section>
+        <h3>Property Values</h3>
+        <p>Each property can have one or more comma separated values.</p>
+		<pre><code class = "html">
+		p{
+		  color: white;
+		  background-color: red;
+		  font-family: Arial, sans-serif;
+		}
+		</code></pre>
+      </section> -->
         
         <!-- Cascading-->
         <section>
@@ -379,9 +441,8 @@ p{
 
 <pre><code class = "html">
   &lt;p>Paragraph&lt;/p>
-  &lt;p class ="green">Paragraph&lt;/p>
   &lt;p class ="red">Paragraph&lt;/p>
-  &lt;p class = "red" id ="special">Paragraph&lt;/p>
+  &lt;p class ="red" id ="special">Paragraph&lt;/p>
 </code></pre>
         </section>
       
@@ -396,8 +457,78 @@ p{
             <li>color</li>
             <li>width</li>
             <li>height</li>
+            <li>border</li>
+            <li>text-align</li>
           </ul>
           <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
+        </section>
+
+        <section>
+          <h3>Height & Width</h3>
+          <pre><code class = "html">
+			p {
+			  height: 100px;
+			  height: 50%;
+			}
+		  </code></pre>
+          <pre><code class = "html">
+			p {
+			  width: 300px;
+			  width: 100%%;
+			  width: auto;
+			}
+		  </code></pre>
+	    </section>
+
+	    <section>
+          <h3>Borders</h3>
+          <pre><code class = "html">
+			p {
+			  border-style: solid;
+			  border-width: 4px;
+			  border-color: red;
+			}
+		  </code></pre>
+          <pre><code class = "html">
+			p {
+			  border: 4px solid red;
+			}
+		  </code></pre>
+		  <p style="border: 4px solid red">Hello I am a paragraph with a border.</p>
+	    </section>
+
+	     <section>
+          <h3>Text-align</h3>
+          <pre><code class = "html">
+			p {
+			  text-align: left;
+			  text-align: center;
+			  text-align: right;
+			}
+		  </code></pre>
+		  <p style="text-align: right">Hello I am a paragraph with text aligned to the right.</p>
+	    </section>
+      
+        <!-- Exercise-->
+        <section class="hide-pdf">
+          <h3>Let's develop it</h3>
+          <ul>
+            <li>Try using ids and classes to change specific elements</li>
+           	<li>Remember: <span style="color:pink">id = #</span> and <span style="color:pink">class = .</span></li>
+           	<li>Use some different properties!<br>
+	          <ul>
+	            <li>background-color</li>
+	            <li>font-family</li>
+	            <li>font-size</li>
+	            <li>color</li>
+	            <li>width</li>
+	            <li>height</li>
+	            <li>border</li>
+	            <li>text-align</li>
+	            <li>etc...</li>
+	          </ul>
+	         </li>
+          </ul>
         </section>
         
        <!-- Question-->
