@@ -45,7 +45,7 @@
         
         <!-- Welcome-->
         <section>
-          <h3>Welcome!</h3>
+          <h3>Welcome back (again)!</h3>
           <div class = "left-align">
           <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
           <p class ="green">Some "rules"</p>
@@ -58,19 +58,99 @@
           </div>
         </section>
         
+        <!-- Welcome-->
+        <section class="hide-pdf">
+          <h3>Welcome back (again)!</h3>
+          <ul>
+            <li>What is one more thing you learned / liked / found especially cool from last week?</li>
+            <li>What is one question you still have? (or thing you're still confused about or want to have clarified, etc)</li>
+          </ul>
+        </section>
+        
          <section>
         	<h3>What we'll be making today</h3>
         	<div class="left" style="width: 45%;">
-        		<p>Today we will be making a site from scratch using divs and spans to create a header, footer, sidebar and a content area.</p>
+        		<p>Today we will be adding to our sites (or making a new site from scratch) using divs and spans. We can create a header, footer, sidebar and a content area... or anything else you want to try!</p>
         	</div>
         	<div class="right" style="width: 45%;">
         		<img src="images/session2site.png">
         	</div>
         </section>
+
+        <section>
+        <h3>First, a recap: HTML tags (remember those?) :)</h3>
+          <ul>
+            <li class = "fragment">Opening tags at the beginning: <span style="color:yellow">&lt;element_name></span></li>
+            <li class = "fragment">Content goes in the middle</li>
+            <li class = "fragment">Closing tags at the end: <span style="color:yellow">&lt;/element_name></span></li>
+            <li class = "fragment">
+<pre><code class = "html">Like these:
+  &lt;p>Paragraph&lt;/p>
+  &lt;a>Paragraph&lt;/a>
+</code></pre>
+          </li>
+          </ul>
+      </section> 
+
+        <!-- ID vs Class-->
+        <section>
+        <h3>First, a recap: IDs vs. Classes</h3>
+          <ul>
+            <li class = "fragment">IDs and classes are "hooks" -- we need a way to get at our content!</li>
+            <li class = "fragment">We use them to add styling with CSS, but they are also important to Javascript</li>
+            <li class = "fragment"><span class="yellow">IDs</span> are unique: you can't have more than one element with the same ID, and an element can't have more than one ID</li>
+            <li class = "fragment"><span class="yellow">Classes</span> are NOT unique: you can have more than one element with the same class, and an element can have multiple classes</li>
+          </ul>
+      </section> 
+
+        <!-- ID vs Class-->
+        <section>
+        <h3>Recap: IDs vs. Classes</h3>
+        <div class = "left-align">
+          <span class = "yellow">ID</span> -- Should only apply to one element on a webpage.<br>i.e. a webpage only has one footer.
+          <p>The "#" (hashtag) is how you tell CSS "this is an id."</p>
+        </div>
+        <div class = "left-align">
+          <span class = "yellow">Class</span> -- Many elements can have the same class. I.E. There can be many warnings on one webpage.
+          <p>The "." (period) is how you tell CSS "this is a class name."</p>
+        </div>
+      </section>  
+        
+        <!-- Selectors ID-->
+        <section>
+          <h3>Selector: ID</h3>
+  <pre><code class = "html">
+  #footer {
+    property: value;
+  }
+  </code></pre>
+            <p>Selects all elements with an id of "footer".</p>
+            
+  <pre><code class = "html">
+  &lt;p id="footer">Copyright 2011&lt;/p>
+  </code></pre>
+           <p>The associated HTML.</p>
+          </section>
+          
+          <!-- Selectors Class-->
+          <section>
+            <h3>Selector: Class</h3>
+  <pre><code class = "html">
+  .warning {
+    color: red;
+  }
+  </code></pre>
+            <p>Selects all elements with a class of "warning".</p>
+
+  <pre><code class = "html">
+  &lt;p class="warning">Run away!&lt;/p>
+  </code></pre>
+         <p>The associated HTML.</p>
+        </section>
         
         <!-- Inline vs. block-->
         <section>
-          <h3>Inline vs Block</h3>
+          <h3>Now, some new stuff! Inline vs Block</h3>
           <div class = "left" style="width: 50%; text-align: left;">
             <div class = "fragment">
               <p>So far, we have mostly seen <span class="green">"block"</span> elements</p>
@@ -79,7 +159,7 @@
             <br/><br/>
             <div class = "fragment">
               <p>There are also <span class="green">"inline"</span> elements</p>
-              <p>They appear on the same line that they are written on.</p>
+              <p>They appear on the same line as the preceding elements.</p>
             </div>
           </div>
           <div class="right fragment">
@@ -88,7 +168,7 @@
         </section>
         <!-- Inline v block again-->
         <section>
-          <h3>Block &amp; Inline Elements,</h3>
+          <h3>Block &amp; Inline Elements</h3>
           <ul>
             <li>CSS divides HTML into two types: inline and block.</li>
             <li>After block elements, browsers render a new line.</li>
@@ -99,10 +179,10 @@
         <section> 
         	<h3>Element: Div</h3>
         		<ul>
-	        		<li>Block level element. Each new div is rendered on a new line.</li>
-	        		<li>A division, or section of content within an HTML page.</li>
+	        		<li>Block level element: each new div is rendered on a new line.</li>
+	        		<li>A division, or section, of content within an HTML page.</li>
 	        		<li>Used to group elements to format them with CSS.</li>
-	        		<li>Apply IDs and Classes to divs to control their styles with CSS.</li>
+	        		<li>We apply IDs and classes to divs to control their styles with CSS.</li>
         		</ul>
 <pre><code>&lt;div>
    &lt;p>Content&lt;p>
@@ -157,13 +237,37 @@
         </section> 
         <section>
           <h3>Let's Develop It</h3>
-         <p class="left-align">Let's create a site using divs to separate content into different sections on our page.</p>
-         <p class="left-align">Create a header, content area, sidebar, and a footer.</p>         
+         <p class="left-align">Try using divs to separate content into different sections on your web page. Play around with it!</p>
+<pre><code class = "html">
+.align-right{
+  text-align:right;
+  color: green; 
+  font-weight: bold;
+}
+</code></pre>
+
+<pre><code class ="html">
+&lt;div class="align-right">
+  &lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p>
+  &lt;p>Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p> 
+&lt;/div>
+&lt;p>Magna aliqua. Ut enim ad minim veniam.&lt;/p> 
+&lt;p>Quis nostrud exercitation ullamco.&lt;/a>
+</code></pre>
+<div style = "text-align:right;font-weight: bold; font-size: 70%;" class = "green">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+  <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
+</div>
+<div class = "left-align" style="font-size: 70%;">
+<p>Magna aliqua. Ut enim ad minim veniam.</p>
+<p>Quis nostrud exercitation ullamco.</a>
+
+</div>      
         </section> 
         <section>
         	<h3>Element: Span</h3>
         	<ul>
-        	<li>Inline element. Each new span is rendered next to each other &amp; only wraps when it reaches the edge of the containing element.</li>
+        	<li>Inline element: each new span is rendered next to each other &amp; only wraps onto the next line when it reaches the edge of the containing element.</li>
         	<li>Can be used to apply styles to text inline so as not to break the flow of content.</li>
         	</ul>
         </section>     
@@ -187,7 +291,18 @@
         <!-- Exercise-->
          <section>
           <h3>Let's Develop It</h3>
-         <p>Let's add some spans to our content to help highlight some text. </p>
+         <p>Let's add some spans to our content to help highlight some text. </p> 
+<pre><code class ="html">
+.yellow{
+  color:yellow;
+}
+</code></pre>
+
+<pre><code class ="html">
+&lt;p>Paragraph with &lt;span class ="yellow">yellow&lt;/span> text.&lt;/p>
+</code></pre>
+
+<p>Paragraph with <span class ="yellow">yellow</span> text.</p>
         </section>      
         <!-- Pseudo class-->
         <section>
@@ -229,12 +344,55 @@ a:link
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
-          <p>Add pseudo classes to your links</p>
+          <p>Try adding pseudo classes to your links</p>
+<pre><code class ="html">
+  a:link  {color:#FF0000;} /* unvisited link */
+  a:visited {color:#00FF00;} /* visited link */
+  a:hover {color:#FF00FF;} /* mouse over link */
+  a:active  {color:#0000FF;} /* selected link */
+</code></pre>
         </section>
+        <!-- Width-->
+    <section>
+      <h3>Property: Width</h3>
+      <p>Sets the width of an element.</p>
+      <p>Includes CONTENT AREA only.</p>
+      <p>Does NOT include padding or borders: remember that these add to the width.</p>
+      <p>So, if you have a width of 100px and padding of 10px on both sides, the full width will end up as 120px.</p>
+    </section>
+    <!-- height-->
+    <section>
+      <h3>Property: Height</h3>
+      <p>Sets the height of an element.</p>
+      <p>Includes CONTENT AREA only.</p>
+      <p>Does NOT include padding or borders: remember that these add to the height.</p>
+    </section>
+    <!-- Exercise -->
+    <section>
+      <h3>Let's develop it!</h3>
+      <div class="left-align">
+        <p>Add a width &amp; height to some of your divs.</p>
+        <p>Use IDs to target each div with CSS</p>
+  <pre><code class = "html">
+  #box-one {
+    height: 100px;
+    height: 50%;
+  }
+  </code></pre>
+  <pre><code class = "html">
+  #box-two {
+    width: 300px;
+    width: 100%;
+    width: auto;
+  }
+  </code></pre>
+      </div>
+    </section>
         
         <!-- Box model-->
         <section>
           <h3>Box Model</h3>
+          <p>Every HTML element can be thought of as a box!</p>
           <img src ="images/box-model.png"/>
         </section>
         
@@ -368,29 +526,30 @@ padding: 10px 5px 3px 5px;
         <!-- Exercise -->
 		<section>
 			<h3>Let's Develop it!</h3>
-			<p>Let's add some padding, borders, and margins to our divs.</p>
-			<p>Let's center our entire document in the browser.</p>
+			<p style="font-size:24px">Let's add some padding, borders, and margins to our divs.</p>
+			<p style="font-size:24px">Try centering your entire document in the browser.</p>
+<pre><code class ="html">margin: 10px 5px 3px 5px;
+margin: 5px;
+</code></pre>
+<pre><code class ="html">padding: 5px 15px 20px 10px;
+padding: 5px;
+</code></pre>
+<pre><code class ="html">border-top: 1px solid #ff0000;
+border-bottom: 4px dotted #000000;
+</code></pre>
+      <img src ="images/box-model-margin.png" style="height:300px"/>
 		</section>
-        <!-- Width-->
-		<section>
-			<h3>Property: Width</h3>
-			<p>Sets the width of an element.</p>
-			<p>Does not include padding or borders, remember these add to the width.</p>
-		</section>
-		<!-- height-->
-		<section>
-			<h3>Property: Height</h3>
-			<p>Sets the height of an element.</p>
-			<p>Does not include padding or borders, remember these add to the width.</p>
-		</section>
-		<!-- Exercise -->
-		<section>
-			<h3>Let's develop it!</h3>
-			<div class="left-align">
-				<p>Add a width &amp; height to our divs.</p>
-				<p>Use IDs to target each div with CSS</p>
-			</div>
-		</section>
+
+    <section>
+      <h3>Let's develop it!</h3>
+      <div style="float:left;width:50%;text-align:left">
+        <p>Try creating some more separation on the page: add a header, footer, and sidebar in addition to your main content area!</p>
+      </div>
+      <div style="float:right">
+        <img src="images/session2site.png" style="height:500px">
+      </div>
+    </section>
+
         <section>
           <h2>Questions?</h2>
           <div style = "font-size:1200%; height:100%; margin-top:30%" class ="blue">?
